@@ -10,9 +10,9 @@ object MergeSort {
   /**
    * Sort x with merge sort .
    *
-   * @tparam T Type parameter .
+   * @tparam T Type parameter . T can be convert to Ordered[T] implicitly . For example, RichInt(or Int) and so on .
    * @param x The array you want sort .
-   * @param comparison Comparison expression for array elements .
+   * @param c Type parameter information . You don't have to define .
    */
   def execute[T<% Ordered[T]](x: Array[T], isDescending: Boolean = false)(implicit c: ClassTag[T]) = {
     def sort(array: Array[T]): Array[T] = {
