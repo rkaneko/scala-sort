@@ -24,15 +24,13 @@ merge sort
         println(array.mkString(" "))
 
        def ascent = {
-         implicit val comparison = (a: Int, b: Int) => a - b
          println("ascending sort")
          println(MergeSort.execute(array) mkString " ")
        }
 
        def descend = {
-         implicit val comparison = (a: Int, b: Int) => b - a
          println("descending sort")
-         println(MergeSort.execute(array) mkString " ")
+         println(MergeSort.execute(array, true) mkString " ")
        }
 
        ascend
